@@ -1115,7 +1115,7 @@ let lastTime = 0;
 let collisionCooldown = 0;
 
 function update(dt) {
-  if (state !== 'racing') return;
+  if (state === 'start' || state === 'end') return;
 
   gameTime += dt;
 
