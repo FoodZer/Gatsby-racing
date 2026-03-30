@@ -1330,6 +1330,7 @@ function resetGame() {
 // ---- Button Listeners ----
 document.getElementById('startBtn').addEventListener('click', () => {
   document.getElementById('startScreen').classList.add('hidden');
+  showScreen('hud'); 
   resetGame();
 });
 
