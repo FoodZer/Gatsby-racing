@@ -1328,10 +1328,16 @@ function resetGame() {
 }
 
 // ---- Button Listeners ----
-document.getElementById('startBtn').addEventListener('click', () => {
-  document.getElementById('startScreen').classList.add('hidden');
-  showScreen('hud'); 
-  resetGame();
+window.addEventListener('load', () => {
+  const startBtn = document.getElementById('startBtn');
+
+  startBtn.addEventListener('click', () => {
+    console.log("START CLICKED"); // debug
+
+    document.getElementById('startScreen').classList.add('hidden');
+    showScreen('hud');
+    resetGame();
+  });
 });
 
 document.getElementById('restartBtn').addEventListener('click', () => {
